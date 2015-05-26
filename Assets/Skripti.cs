@@ -3,13 +3,68 @@ using System.Collections;
 
 public class Skripti : MonoBehaviour {
 
+
+	float timer =0;
+
+
 	// Use this for initialization
 	void Start () {
-	
+
+		ampu = transform.Find ("Ampupiste");
+
 	}
+
+
+
+	bool shootside = false;
+	
+	Transform ampu;
+
+
+
+
+
+	void shoot(){
+		if (timer < Time.time) {
+			if(shootside){
+				GameObject tmp = Instantiate(Resources.Load ("beam"),ampu.position,ampu.rotation) as GameObject;
+				bullet tmp2 = tmp.GetComponent<bullet>();
+				tmp2.speed = 80;
+				tmp2.taga = transform.tag;
+				shootside = false;
+				timer +=0.25f;
+				}
+
+			/*else {
+				GameObject tmp = Instantiate(Resources.Load ("beam"),rightg.position,rightg.rotation) as GameObject;
+				shootside = true;
+				bullet tmp2 = tmp.GetComponent<bullet>();
+				tmp2.speed = 80;
+				tmp2.taga = transform.tag;
+				timer +=0.25f;
+				
+			}*/
+		
+		}
+		
+		
+	}
+
+
+
+
+
+
+
+
+
 	
 	// Update is called once per frame
-	void Update () {
+void Update () {
+
+		if (Input.GetMouseButton (0)) {
+			shoot ();
+		}
 
 
 		
