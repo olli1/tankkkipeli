@@ -4,27 +4,27 @@ using System.Collections;
 public class Skripti : MonoBehaviour {
 
 
-	float timer =0;
+	//float timer =0;
 
 
 	// Use this for initialization
 	void Start () {
 
-		ampu = transform.Find ("Ampupiste");
+		//ampu = transform.Find ("Ampupiste");
 
 	}
 
 
 
-	bool shootside = false;
+	//bool shootside = false;
 	
-	Transform ampu;
+	//Transform ampu;
 
 
 
 
 
-	void shoot(){
+	/*void shoot(){
 		if (timer < Time.time) {
 			if(shootside){
 				GameObject tmp = Instantiate(Resources.Load ("beam"),ampu.position,ampu.rotation) as GameObject;
@@ -43,12 +43,12 @@ public class Skripti : MonoBehaviour {
 				tmp2.taga = transform.tag;
 				timer +=0.25f;
 				
-			}*/
+			}
 		
 		}
 		
 		
-	}
+	}*/
 
 
 
@@ -62,9 +62,10 @@ public class Skripti : MonoBehaviour {
 	// Update is called once per frame
 void Update () {
 
-		if (Input.GetMouseButton (0)) {
+		/*if (Input.GetMouseButton (0)) {
+			Debug.Log("toimii");
 			shoot ();
-		}
+		}*/
 
 
 		
