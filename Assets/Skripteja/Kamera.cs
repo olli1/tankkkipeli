@@ -9,6 +9,7 @@ public class Kamera : MonoBehaviour {
 	public float smoothTimeX;
 
 	public GameObject player;
+	public GameObject spawnipaikka;
 
 
 
@@ -18,7 +19,7 @@ public class Kamera : MonoBehaviour {
 
 		player = GameObject.FindGameObjectWithTag ("Player");
 
-	
+		spawnipaikka = GameObject.FindGameObjectWithTag ("Respawn");
 	}
 
 
@@ -34,6 +35,22 @@ public class Kamera : MonoBehaviour {
 
 			transform.position = new Vector3 (PosX, PosY, transform.position.z);
 		}
+	
+	/*if (player == null) {
+
+
+
+
+			float PosX = Mathf.SmoothDamp (transform.position.x, spawnipaikka.transform.position.x, ref velocity.x, smoothTimeX);
+			float PosY = Mathf.SmoothDamp (transform.position.y, spawnipaikka.transform.position.y, ref velocity.y, smoothTimeY);
+			
+			
+			
+			transform.position = new Vector3 (PosX, PosY, transform.position.z);
+	
+		
+		} */
+	
 	}
 
 
@@ -43,6 +60,28 @@ public class Kamera : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+
+		if(player == null) {
+			
+			
+			
+			
+			float PosX = Mathf.SmoothDamp (transform.position.x, spawnipaikka.transform.position.x, ref velocity.x, smoothTimeX);
+			float PosY = Mathf.SmoothDamp (transform.position.y, spawnipaikka.transform.position.y, ref velocity.y, smoothTimeY);
+			
+			
+			
+			transform.position = new Vector3 (PosX, PosY, transform.position.z);
+			
+			
+		} 
+
+
+
+
+		
+
 	
 	}
 }

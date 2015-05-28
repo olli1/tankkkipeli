@@ -11,9 +11,9 @@ GameObject:
   - 212: {fileID: 21272728}
   - 50: {fileID: 5078108}
   - 61: {fileID: 6112358}
-  - 114: {fileID: 11486194}
   - 114: {fileID: 11444218}
   - 114: {fileID: 11470346}
+  - 114: {fileID: 11459352}
   m_Layer: 8
   m_Name: Bullet 1
   m_TagString: Untagged
@@ -73,6 +73,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 5
+--- !u!114 &11459352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 136622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0c80bae2cbd234eb29f285f0188cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
 --- !u!114 &11470346
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -85,19 +97,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 5
---- !u!114 &11486194
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f0f7b5d9d30b4648a8d48fc0f04697f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 1
-  invulnPeriod: 0
 --- !u!212 &21272728
 SpriteRenderer:
   m_ObjectHideFlags: 1

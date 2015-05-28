@@ -10,11 +10,13 @@ public class PelaajaAmpuu : MonoBehaviour {
     public float viive = 0.25f;
 	float jaahyAjastin = 0;
 
+	int bulletLayer;
 
 
 	// Use this for initialization
 	void Start () {
 	
+		bulletLayer = gameObject.layer;
 
 		ampuu = transform.Find ("Ampupiste");//löytää pelaajan gameobjektissa olevan empty child objektin joka määrittää ammuksen lähtöpaikan
 
@@ -34,7 +36,13 @@ public class PelaajaAmpuu : MonoBehaviour {
 			Debug.Log("pam");	
 			jaahyAjastin = viive;
 		
-			Instantiate(bulletPrefab,ampuu.position+bulletOffset, ampuu.rotation);//ammuksen lähtöpaikan määritys ja ammuksen luonti kun ammutaan
+
+			GameObject bulletGO =(GameObject)Instantiate(bulletPrefab,ampuu.position+bulletOffset, ampuu.rotation);//ammuksen lähtöpaikan määritys ja ammuksen luonti kun ammutaan
+			
+          	bulletGO.layer = bulletLayer;
+
+
+			//Instantiate(bulletPrefab,ampuu.position+bulletOffset, ampuu.rotation);//ammuksen lähtöpaikan määritys ja ammuksen luonti kun ammutaan
 
 		}
 

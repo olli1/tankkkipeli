@@ -3,7 +3,7 @@ using System.Collections;
 
 public class VihollisSkripti1 : MonoBehaviour {
 
-	//Unity tutorial  2d space shooter part 5 .shooting and AI
+	//Unity tutorial  2d space shooter part 5 -shooting and AI 32:30
 	Transform player;
 
 	public float speed;
@@ -17,7 +17,7 @@ public class VihollisSkripti1 : MonoBehaviour {
 	
 		if (player == null) {
 		
-		GameObject go =	GameObject.Find("PelaajaTankki 1");
+		GameObject go =	GameObject.FindGameObjectWithTag("Player");
 		
 		
 		

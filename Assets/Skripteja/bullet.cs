@@ -12,13 +12,19 @@ public class bullet : MonoBehaviour {
 		Destroy (gameObject, 5);
 	}
 
-	void OnTriggerEnter2D(Collider2D other){
-
-
-			other.SendMessageUpwards("takeDamage",damage,SendMessageOptions.DontRequireReceiver);
+	void OnTriggerEnter2D()
+		
+	{
+		Debug.Log ("triggeri");//testi
+		
+		
 		
 
-
+		
+		
+		
+		gameObject.layer = 10; //vaihta layeria
+		
 	}
 
 	// Update is called once per frame

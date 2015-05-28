@@ -9,7 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 433018}
   - 114: {fileID: 11467822}
-  m_Layer: 0
+  - 114: {fileID: 11451524}
+  m_Layer: 9
   m_Name: VihollisTorni
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,6 +29,7 @@ GameObject:
   - 61: {fileID: 6103780}
   - 114: {fileID: 11484802}
   - 114: {fileID: 11405616}
+  - 114: {fileID: 11414782}
   m_Layer: 9
   m_Name: 'VihollisTankki '
   m_TagString: Untagged
@@ -43,7 +45,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 476704}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ampupiste
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +77,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 473994}
   - 212: {fileID: 21275654}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: KV-2_strip2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -115,7 +117,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 121934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00499999989, y: -.768999994, z: 0}
+  m_LocalPosition: {x: .00499999989, y: .762000024, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 433018}
@@ -139,7 +141,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.3299999, y: -.709999979, z: 0}
+  m_LocalPosition: {x: 3.91000009, y: 3.0999999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 473994}
@@ -186,6 +188,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: .00999999978
+--- !u!114 &11414782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ca66c2ef82bc104f855b91ebe7a377c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 1
+--- !u!114 &11451524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76cc775c41982f34fbda80b732a2a19d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 136622, guid: dd7711589526f2445b4e231df7487c0a, type: 2}
+  bulletOffset: {x: 0, y: 0, z: 0}
+  viive: .800000012
 --- !u!114 &11467822
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -209,7 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f0f7b5d9d30b4648a8d48fc0f04697f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 4
   invulnPeriod: 0
 --- !u!212 &21200746
 SpriteRenderer:

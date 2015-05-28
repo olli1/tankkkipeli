@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21294302}
   - 114: {fileID: 11492174}
   - 114: {fileID: 11433044}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PelaajaTorni
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 499410}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ampupiste
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.53999996, y: -1.20000005, z: 0}
+  m_LocalPosition: {x: -6.3499999, y: -2.27999997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 436054}
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f0f7b5d9d30b4648a8d48fc0f04697f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 5
   invulnPeriod: 2
 --- !u!114 &11492174
 MonoBehaviour:
