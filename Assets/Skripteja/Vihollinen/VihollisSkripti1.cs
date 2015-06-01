@@ -41,7 +41,7 @@ public class VihollisSkripti1 : MonoBehaviour {
 		Vector3 dir = player.position - transform.position;
 		dir.Normalize ();
 
-		float zAngle = Mathf.Atan2 (dir.y, dir.x) * Mathf.Rad2Deg - 90;
+		float zAngle = Mathf.Atan2 (dir.y, dir.x) * Mathf.Rad2Deg -90;
 
 
 		transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.Euler (0, 0, zAngle), speed);
