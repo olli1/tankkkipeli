@@ -4,7 +4,7 @@ using System.Collections;
 public class VihollisSpawner : MonoBehaviour {
 
 	public GameObject enemyPrefab;
-
+	public GameObject[] enemys;
 	float spawnDistance = 10f;
 
 	float enemyRate = 5;
@@ -15,7 +15,8 @@ public class VihollisSpawner : MonoBehaviour {
 
 		// Use this for initialization
 	void Start () {
-	
+		enemys = Resources.LoadAll<GameObject> ("enemys");
+
 	}
 	
 	// Update is called once per frame
@@ -35,8 +36,9 @@ public class VihollisSpawner : MonoBehaviour {
 			offset.z =0;
 
 			offset = offset.normalized * spawnDistance;
-
-			Instantiate(enemyPrefab, transform.position + offset,transform.rotation);
+			int tmp = Random.Range (0,enemys.Length);
+			Instantiate(enemys[tmp], transform.position + offset,transform.rotation);
+			Debug.Log (tmp);
 		
 		}
 	
