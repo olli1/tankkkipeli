@@ -5,12 +5,16 @@ public class PelaajaAmpuu : MonoBehaviour {
 
 	public GameObject bulletPrefab;
 
+
+
 	public Vector3 bulletOffset = new Vector3 (0, 0, 0);//voi hienosäätää ammuksen lähtökohtaa
 	
     public float viive = 0.25f;
 	float jaahyAjastin = 0;
 
 	int bulletLayer;
+
+
 
 
 	// Use this for initialization
@@ -45,6 +49,7 @@ public class PelaajaAmpuu : MonoBehaviour {
 			//Instantiate(bulletPrefab,ampuu.position+bulletOffset, ampuu.rotation);//ammuksen lähtöpaikan määritys ja ammuksen luonti kun ammutaan
 
 		}
+
 
 
 	}

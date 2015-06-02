@@ -2,14 +2,18 @@
 using System.Collections;
 
 public class KolariVahinko : MonoBehaviour {
-
+	public float piste = 10;
 
 	public int health = 1;//healthi muuneltavissa
 
 	public float invulnPeriod = 0;
 
+	 
+
 	float invulnTimer = 0;
 	int correctLayer;
+
+
 
 	SpriteRenderer[] spriteRend;
 
@@ -94,6 +98,14 @@ public class KolariVahinko : MonoBehaviour {
 
 			if (health <= 0) { //aktivoi tuhoutumisen
 				Die ();
+				if(transform.tag == "Enemy"){
+				GameObject.Find ("Controlleri").GetComponent<Kontrolloi>().lisaa(piste);
+			
+
+
+			
+			
+			}
 			
 			}
 
@@ -107,6 +119,8 @@ public class KolariVahinko : MonoBehaviour {
 		Destroy (gameObject);
 		
 	}
+
+
 
 
 
