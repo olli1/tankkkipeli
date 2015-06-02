@@ -40,7 +40,9 @@ public class MainMenuskripti : MonoBehaviour {
 
 		if (GUI.Button (new Rect (Screen.width * painike_SijaintiX, Screen.height * painikkeen_SijaintiY, Screen.width * 0.25f, Screen.height * 0.1f), "QUIT")) {
 			
-			print ("Klikattu");
+
+
+			Application.Quit();
 
 
 			

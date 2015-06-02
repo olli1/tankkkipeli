@@ -100,10 +100,12 @@ public class KolariVahinko : MonoBehaviour {
 				Die ();
 				if(transform.tag == "Enemy"){
 				GameObject.Find ("Controlleri").GetComponent<Kontrolloi>().lisaa(piste);
-			
 
+				/*if(GameObject.Find ("Controlleri").GetComponent<Kontrolloi>().pisteet>=90){
 
-			
+					Lataa uusi kenttä
+
+                    }*/
 			
 			}
 			
