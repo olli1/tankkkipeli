@@ -15,7 +15,7 @@ public class VihollisSkripti1 : MonoBehaviour {
 	Vector3 startPos;
 
 	public float speed;
-
+	public float returnSpeed;
 	void Start () {
 
 		startPos = transform.position;
@@ -92,7 +92,25 @@ public class VihollisSkripti1 : MonoBehaviour {
 
 		}
 
+		else{
 
+			Vector3 suunta = startPos-transform.position;
+			suunta.Normalize();
+
+			float zKulma = Mathf.Atan2 (suunta.y, suunta.x) * Mathf.Rad2Deg - 90;
+
+			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.Euler (0, 0, zKulma), speed);
+
+
+			  
+
+
+				
+			   
+
+			//transform.position = Vector3.MoveTowards(transform.position, startPos, returnSpeed * Time.deltaTime);
+		}
+		
 
 
 

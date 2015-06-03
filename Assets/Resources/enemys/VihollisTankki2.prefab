@@ -263,6 +263,7 @@ MonoBehaviour:
   inRange: 0
   range: 5
   speed: .0299999993
+  returnSpeed: 3
 --- !u!114 &11434018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -294,6 +295,7 @@ MonoBehaviour:
   inRange: 0
   range: 4
   speed: .00999999978
+  returnSpeed: 3
 --- !u!114 &11466094
 MonoBehaviour:
   m_ObjectHideFlags: 1
