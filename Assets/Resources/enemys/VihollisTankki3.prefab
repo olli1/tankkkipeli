@@ -12,7 +12,22 @@ GameObject:
   - 114: {fileID: 11479148}
   m_Layer: 9
   m_Name: VihollisTorni
-  m_TagString: Enemy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &116452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 447216}
+  m_Layer: 0
+  m_Name: 'loppu '
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +43,22 @@ GameObject:
   - 212: {fileID: 21209006}
   m_Layer: 9
   m_Name: KV-2_strip2_0
-  m_TagString: Enemy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &162778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 489096}
+  m_Layer: 9
+  m_Name: alku
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +78,7 @@ GameObject:
   - 114: {fileID: 11468320}
   m_Layer: 9
   m_Name: VihollisTankki3
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +125,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 479184}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!4 &411304
 Transform:
   m_ObjectHideFlags: 1
@@ -108,6 +138,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 467434}
   m_RootOrder: 1
+--- !u!4 &447216
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116452}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.25999999, y: 8.10999966, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 479184}
+  m_RootOrder: 0
 --- !u!4 &467434
 Transform:
   m_ObjectHideFlags: 1
@@ -121,7 +163,7 @@ Transform:
   - {fileID: 486978}
   - {fileID: 411304}
   m_Father: {fileID: 479184}
-  m_RootOrder: 1
+  m_RootOrder: 3
 --- !u!4 &479184
 Transform:
   m_ObjectHideFlags: 1
@@ -129,9 +171,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.055584, y: -28.4506092, z: 0}
+  m_LocalPosition: {x: 4.37758636, y: 4.02731133, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 447216}
+  - {fileID: 489096}
   - {fileID: 403832}
   - {fileID: 467434}
   m_Father: {fileID: 0}
@@ -148,6 +192,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 467434}
   m_RootOrder: 0
+--- !u!4 &489096
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162778}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .0338909626, y: -.65760839, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 479184}
+  m_RootOrder: 1
 --- !u!50 &5026252
 Rigidbody2D:
   m_ObjectHideFlags: 1
@@ -187,6 +243,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f609238c4c09ddd479e282f89c465931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alku: {fileID: 489096}
+  loppu: {fileID: 447216}
+  huomattu: 0
+  inRange: 0
+  range: 5
   speed: .00999999978
 --- !u!114 &11468320
 MonoBehaviour:
@@ -225,6 +286,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f609238c4c09ddd479e282f89c465931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alku: {fileID: 0}
+  loppu: {fileID: 0}
+  huomattu: 0
+  inRange: 0
+  range: 5
   speed: .0299999993
 --- !u!114 &11492020
 MonoBehaviour:
@@ -237,7 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f0f7b5d9d30b4648a8d48fc0f04697f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  piste: 15
+  piste: 10
   health: 4
   invulnPeriod: 0
 --- !u!212 &21209006

@@ -32,7 +32,7 @@ GameObject:
   - 114: {fileID: 11414782}
   m_Layer: 9
   m_Name: 'VihollisTankki '
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,6 +52,66 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &139640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 479210}
+  m_Layer: 0
+  m_Name: 'loppu '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &148268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 445096}
+  m_Layer: 0
+  m_Name: loppu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &161914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 438348}
+  m_Layer: 9
+  m_Name: alku
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &166726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 434946}
+  m_Layer: 0
+  m_Name: 'loppu '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &181576
 GameObject:
   m_ObjectHideFlags: 1
@@ -63,6 +123,21 @@ GameObject:
   - 212: {fileID: 21200746}
   m_Layer: 9
   m_Name: KV-2_strip2_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &187326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 496772}
+  m_Layer: 0
+  m_Name: 'loppu '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +172,43 @@ Transform:
   - {fileID: 482584}
   - {fileID: 476704}
   m_Father: {fileID: 499012}
+  m_RootOrder: 6
+--- !u!4 &434946
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166726}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.61000013, y: -.0399999991, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 499012}
   m_RootOrder: 1
+--- !u!4 &438348
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161914}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -.860000014, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 499012}
+  m_RootOrder: 4
+--- !u!4 &445096
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 148268}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .150000006, y: 6.94000006, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 499012}
+  m_RootOrder: 0
 --- !u!4 &473994
 Transform:
   m_ObjectHideFlags: 1
@@ -109,7 +220,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 499012}
-  m_RootOrder: 0
+  m_RootOrder: 5
 --- !u!4 &476704
 Transform:
   m_ObjectHideFlags: 1
@@ -122,6 +233,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 433018}
   m_RootOrder: 1
+--- !u!4 &479210
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139640}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .0299999993, y: -4.53000021, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 499012}
+  m_RootOrder: 3
 --- !u!4 &482584
 Transform:
   m_ObjectHideFlags: 1
@@ -134,6 +257,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 433018}
   m_RootOrder: 0
+--- !u!4 &496772
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187326}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.88000011, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 499012}
+  m_RootOrder: 2
 --- !u!4 &499012
 Transform:
   m_ObjectHideFlags: 1
@@ -141,9 +276,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.1242523, y: -7.29034042, z: 0}
+  m_LocalPosition: {x: 12.0527248, y: 11.7091551, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 445096}
+  - {fileID: 434946}
+  - {fileID: 496772}
+  - {fileID: 479210}
+  - {fileID: 438348}
   - {fileID: 473994}
   - {fileID: 433018}
   m_Father: {fileID: 0}
@@ -187,6 +327,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f609238c4c09ddd479e282f89c465931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alku: {fileID: 438348}
+  loppu: {fileID: 445096}
+  huomattu: 0
+  inRange: 0
+  range: 5
   speed: .00999999978
 --- !u!114 &11414782
 MonoBehaviour:
@@ -225,6 +370,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f609238c4c09ddd479e282f89c465931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alku: {fileID: 0}
+  loppu: {fileID: 0}
+  huomattu: 0
+  inRange: 0
+  range: 5
   speed: .0299999993
 --- !u!114 &11484802
 MonoBehaviour:

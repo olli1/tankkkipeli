@@ -84,6 +84,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &182378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 483536}
+  m_Layer: 9
+  m_Name: alku
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &407464
 Transform:
   m_ObjectHideFlags: 1
@@ -121,7 +136,7 @@ Transform:
   - {fileID: 448616}
   - {fileID: 407464}
   m_Father: {fileID: 467898}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!4 &467898
 Transform:
   m_ObjectHideFlags: 1
@@ -129,12 +144,25 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 175544}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.1200008, y: -39.4099998, z: 0}
+  m_LocalPosition: {x: 9.47667122, y: 1.60862947, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 483536}
   - {fileID: 495510}
   - {fileID: 465530}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &483536
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 182378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .0299999993, y: -.50999999, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 467898}
   m_RootOrder: 0
 --- !u!4 &495510
 Transform:
@@ -147,7 +175,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 467898}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!50 &5076222
 Rigidbody2D:
   m_ObjectHideFlags: 1
@@ -187,6 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f0f7b5d9d30b4648a8d48fc0f04697f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  piste: 10
   health: 4
   invulnPeriod: 0
 --- !u!114 &11432570
@@ -200,6 +229,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f609238c4c09ddd479e282f89c465931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alku: {fileID: 0}
+  loppu: {fileID: 0}
+  huomattu: 0
   speed: .0299999993
 --- !u!114 &11434018
 MonoBehaviour:
@@ -226,6 +258,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f609238c4c09ddd479e282f89c465931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alku: {fileID: 0}
+  loppu: {fileID: 0}
+  huomattu: 0
   speed: .00999999978
 --- !u!114 &11466094
 MonoBehaviour:

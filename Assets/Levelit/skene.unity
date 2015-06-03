@@ -6993,7 +6993,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 29
 --- !u!1 &1553936198
 GameObject:
   m_ObjectHideFlags: 0
@@ -7179,7 +7179,7 @@ Transform:
   - {fileID: 1750231651}
   - {fileID: 934575697}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 26
 --- !u!1 &1596095082
 GameObject:
   m_ObjectHideFlags: 0
@@ -8775,7 +8775,7 @@ Transform:
   - {fileID: 513216432}
   - {fileID: 266837116}
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 44
 --- !u!212 &1836490663
 SpriteRenderer:
   m_ObjectHideFlags: 0
