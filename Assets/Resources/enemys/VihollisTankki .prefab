@@ -32,7 +32,7 @@ GameObject:
   - 114: {fileID: 11414782}
   m_Layer: 9
   m_Name: 'VihollisTankki '
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -327,9 +327,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f609238c4c09ddd479e282f89c465931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alku: {fileID: 438348}
-  loppu: {fileID: 445096}
-  huomattu: 0
   inRange: 0
   range: 5
   speed: .00999999978
@@ -346,6 +343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 1
+  spiidi: 1
 --- !u!114 &11451524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -371,9 +369,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f609238c4c09ddd479e282f89c465931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alku: {fileID: 0}
-  loppu: {fileID: 0}
-  huomattu: 0
   inRange: 0
   range: 5
   speed: .0299999993

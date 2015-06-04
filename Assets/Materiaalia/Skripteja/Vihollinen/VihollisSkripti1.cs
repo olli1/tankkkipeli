@@ -6,8 +6,12 @@ public class VihollisSkripti1 : MonoBehaviour {
 	//Unity tutorial  2d space shooter part 5 -shooting and AI 32:30
 	Transform player;
 
-	public Transform alku, loppu;
-	public bool huomattu = false;
+
+
+
+
+	//public Transform alku, loppu;
+	//public bool huomattu = false;
 	public bool inRange = false;
 
 	public float range;
@@ -17,16 +21,31 @@ public class VihollisSkripti1 : MonoBehaviour {
 	public float speed;
 	public float returnSpeed;
 	void Start () {
-
+		//alkuperäinen sijainti tallennetaan tässä
 		startPos = transform.position;
+
+
 	
 	}
+
+
+	void FixedUpdate(){
 	
+
+		//
+	
+	}
+
+
+
+
+
 	// Update is called once per frame
 	void Update () {
 
 
 
+		//alue jossa pelaaja havaitaan 
 		inRange = Physics2D.OverlapCircle (transform.position, range, 1 << LayerMask.NameToLayer ("Player"));
 
 
@@ -42,7 +61,7 @@ public class VihollisSkripti1 : MonoBehaviour {
 
 
 		if (inRange) {
-			
+			if(GetComponent<LiikeEteen>()){GetComponent<LiikeEteen>().spiidi=true;	}
 	
 			if (player == null) {
 				//löydetään pelaaja
@@ -101,6 +120,19 @@ public class VihollisSkripti1 : MonoBehaviour {
 
 			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.Euler (0, 0, zKulma), speed);
 
+		     
+
+
+			if(GetComponent<LiikeEteen>()){
+		
+			GetComponent<LiikeEteen>().spiidi=false;
+			}
+
+
+			//transform.position = Vector3.zero;
+
+
+
 
 			  
 
@@ -118,13 +150,13 @@ public class VihollisSkripti1 : MonoBehaviour {
 
 
 
-		Raycasting ();
+		//Raycasting ();
 		
 
 	}
 
 
-
+	//määritellään alue vihulaisen päälle
 	void OnDrawGizmosSelected(){
 
 
@@ -143,14 +175,15 @@ public class VihollisSkripti1 : MonoBehaviour {
 
 
 
-	void Raycasting(){
+
+	//void Raycasting(){
 
 		//Debug.DrawLine (alku.position, loppu.position, Color.green);
 
-		huomattu = Physics2D.Linecast (alku.position, loppu.position, 1 << LayerMask.NameToLayer ("Player"));
+		//huomattu = Physics2D.Linecast (alku.position, loppu.position, 1 << LayerMask.NameToLayer ("Player"));
 
 
-	}
+	//}
 
 
 
