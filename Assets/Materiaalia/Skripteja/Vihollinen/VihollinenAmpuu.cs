@@ -4,6 +4,8 @@ using System.Collections;
 public class VihollinenAmpuu : MonoBehaviour {
 
 	public GameObject bulletPrefab;
+
+	GameObject liekki;
 	
 	public Vector3 bulletOffset = new Vector3 (0, 0, 0);//voi hienosäätää ammuksen lähtökohtaa
 	
@@ -20,13 +22,15 @@ public class VihollinenAmpuu : MonoBehaviour {
 		bulletLayer = gameObject.layer;
 		
 		ampuu = transform.Find ("Ampupiste");//löytää pelaajan gameobjektissa olevan empty child objektin joka määrittää ammuksen lähtöpaikan
-		
+
+		liekki = transform.Find ("Tuli").gameObject;
 		
 		
 	}
 	
 	Transform ampuu;//tämä että Instantiate onnistuu
-	
+
+	float animeajastin = 0;
 	// Update is called once per frame
 	void Update () {
 
@@ -47,6 +51,15 @@ public class VihollinenAmpuu : MonoBehaviour {
 			
 		}
 
+		if (liekki.activeSelf) {
+			animeajastin += Time.deltaTime;
+		}
+		
+		if(liekki.activeSelf && animeajastin >= 0.125f){
+			liekki.SetActive(false);
+			animeajastin = 0;
+		}
+
 
 
 
@@ -59,6 +72,16 @@ public class VihollinenAmpuu : MonoBehaviour {
 		
 		if (jaahyAjastin <= 0 && player !=null && Vector3.Distance(transform.position,player.position)<9) 
 		{
+
+			if(!liekki.activeSelf){
+				liekki.SetActive(true);
+			}
+
+
+
+
+
+
 			Debug.Log("enemy pam");	
 			jaahyAjastin = viive;
 			

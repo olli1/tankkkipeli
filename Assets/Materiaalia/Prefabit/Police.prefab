@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 1
+  spiidi: 1
 --- !u!114 &11460968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f0f7b5d9d30b4648a8d48fc0f04697f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  piste: 10
   health: 1
   invulnPeriod: 0
 --- !u!114 &11472760
@@ -137,7 +139,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f609238c4c09ddd479e282f89c465931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inRange: 0
+  range: 4.59000015
   speed: 1
+  returnSpeed: 0
 --- !u!212 &21255858
 SpriteRenderer:
   m_ObjectHideFlags: 1
