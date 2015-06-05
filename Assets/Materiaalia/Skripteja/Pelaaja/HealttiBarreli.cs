@@ -2,8 +2,11 @@
 using System.Collections;
 
 public class HealttiBarreli : MonoBehaviour {
+	public float speedi;
 
-	float barrellHealth = 1;
+	public float barrellHealth = 1;
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -12,6 +15,15 @@ public class HealttiBarreli : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		 
+		transform.Rotate(new Vector3(0,0, speedi * Time.deltaTime));
+
+
+
+
+
+
 	
 
 		if(barrellHealth <= 0){ //aktivoi tuhoutumisen
@@ -27,11 +39,11 @@ public class HealttiBarreli : MonoBehaviour {
 
 
 
+	public int addhp = 1;
 
 
 
-
-	void OnTriggerEnter2D()
+	void OnTriggerEnter2D(Collider2D other)
 		
 	{
 		Debug.Log ("triggeri");//testi
@@ -40,7 +52,10 @@ public class HealttiBarreli : MonoBehaviour {
 
 		barrellHealth--;//törmäyksessä vähentää health pisteen
 
-		
+		if (other.tag == "Player") {
+
+			other.SendMessageUpwards("addHP", addhp,SendMessageOptions.DontRequireReceiver);
+	}
 		
 		
 		

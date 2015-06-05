@@ -8,7 +8,7 @@ public class KolariVahinko : MonoBehaviour {
 
 	public float invulnPeriod = 0;
 
-	 
+	Transform HealthTynnyri;
 
 	float invulnTimer = 0;
 	int correctLayer;
@@ -17,6 +17,10 @@ public class KolariVahinko : MonoBehaviour {
 
 	SpriteRenderer[] spriteRend;
 
+
+	public void addHP(int h){
+		health += h;
+	}
 
 	void Start(){
 	
@@ -39,23 +43,39 @@ public class KolariVahinko : MonoBehaviour {
 
 
 
-	void OnTriggerEnter2D()
-
-	{
-		Debug.Log ("triggeri");//testi
 
 
-		    health--;//törmäyksessä vähentää health pisteen
-		    invulnTimer = invulnPeriod; //aika kuinka kauan layer vaihdettuna 
+
+
+
+	void OnTriggerEnter2D(Collider2D other){
+
+	
+		if (other.tag != "Health") {
+
+			health--;//törmäyksessä vähentää health pisteen
+			invulnTimer = invulnPeriod; //aika kuinka kauan layer vaihdettuna 
 
 	
 
-		gameObject.layer = 10; //vaihta layeria
+			gameObject.layer = 10; //vaihta layeria
+		}
+	
 
-	}
+	
+
+
+}
+
+
+
+
 
 
 	void Update(){
+
+
+
 
 
 		if (invulnTimer >= 0) {
