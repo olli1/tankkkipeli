@@ -5,7 +5,7 @@ public class VihollinenAmpuu : MonoBehaviour {
 
 	public GameObject bulletPrefab;
 
-	GameObject liekki;
+	GameObject liekki;//liitty piippuliekkiin
 	
 	public Vector3 bulletOffset = new Vector3 (0, 0, 0);//voi hienosäätää ammuksen lähtökohtaa
 	
@@ -23,7 +23,7 @@ public class VihollinenAmpuu : MonoBehaviour {
 		
 		ampuu = transform.Find ("Ampupiste");//löytää pelaajan gameobjektissa olevan empty child objektin joka määrittää ammuksen lähtöpaikan
 
-		liekki = transform.Find ("Tuli").gameObject;
+		liekki = transform.Find ("Tuli").gameObject;//liittyy piippuliekkiin
 		
 		
 	}
@@ -52,7 +52,7 @@ public class VihollinenAmpuu : MonoBehaviour {
 		}
 
 		if (liekki.activeSelf) {
-			animeajastin += Time.deltaTime;
+			animeajastin += Time.deltaTime;//piippuliekkiin
 		}
 		
 		if(liekki.activeSelf && animeajastin >= 0.125f){
