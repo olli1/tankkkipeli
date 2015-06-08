@@ -25,6 +25,7 @@ public class VihollisSkripti1 : MonoBehaviour {
 		startPos = transform.position;
 
 
+
 	
 	}
 
