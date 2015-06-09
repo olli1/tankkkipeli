@@ -5,11 +5,13 @@ public class PelaajaAmpuu : MonoBehaviour {
 
 	public GameObject bulletPrefab;
 
+
+
 	GameObject liekki;
 
 	public Vector3 bulletOffset = new Vector3 (0, 0, 0);//voi hienosäätää ammuksen lähtökohtaa
 	
-    public float viive = 0.25f;
+    public float viive = 0.30f;
 	float jaahyAjastin = 0;
 
 	int bulletLayer;
@@ -55,8 +57,10 @@ public class PelaajaAmpuu : MonoBehaviour {
 			Debug.Log ("pam");	
 			jaahyAjastin = viive;
 		
-
-			GameObject bulletGO = (GameObject)Instantiate (bulletPrefab, ampuu.position + bulletOffset, ampuu.rotation);//ammuksen lähtöpaikan määritys ja ammuksen luonti kun ammutaan
+				
+			GetComponent<AudioSource>().Play();
+		
+				GameObject bulletGO = (GameObject)Instantiate (bulletPrefab, ampuu.position + bulletOffset, ampuu.rotation);//ammuksen lähtöpaikan määritys ja ammuksen luonti kun ammutaan
 			
 			bulletGO.layer = bulletLayer;
 
@@ -66,4 +70,6 @@ public class PelaajaAmpuu : MonoBehaviour {
 		}
 	
 	}
+
+
 }

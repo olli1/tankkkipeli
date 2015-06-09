@@ -6,7 +6,7 @@ public class VihollisSkripti1 : MonoBehaviour {
 	//Unity tutorial  2d space shooter part 5 -shooting and AI 32:30
 	Transform player;
 
-
+	public float rotaatio;
 
 
 
@@ -25,6 +25,9 @@ public class VihollisSkripti1 : MonoBehaviour {
 		startPos = transform.position;
 
 
+		if (rotaatio > 0) {
+			transform.Rotate (Vector3.forward * rotaatio);
+		}
 
 	
 	}

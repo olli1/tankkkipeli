@@ -3,7 +3,7 @@ using System.Collections;
 
 public class LevelExit : MonoBehaviour {
 
-	public string Taso2;
+	public string Taso;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +14,7 @@ public class LevelExit : MonoBehaviour {
 	void OnTriggerEnter2D(){
 	
 	
-		Application.LoadLevel (Taso2);
+		Application.LoadLevel (Taso);
 	
 	
 	}
@@ -25,5 +25,13 @@ public class LevelExit : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+
+
+
+
+
+
+
+
 	}
 }

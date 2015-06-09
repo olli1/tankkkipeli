@@ -2514,14 +2514,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 55
       objectReference: {fileID: 0}
-    - target: {fileID: 180104, guid: 7fc956c879fa8914d8f29fb92e2ab7f4, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 21240152, guid: 7fc956c879fa8914d8f29fb92e2ab7f4, type: 2}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7fc956c879fa8914d8f29fb92e2ab7f4, type: 2}
   m_IsPrefabParent: 0
@@ -5987,32 +5979,6 @@ SpriteRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 180104, guid: 7fc956c879fa8914d8f29fb92e2ab7f4, type: 2}
   m_PrefabInternal: {fileID: 477042703}
---- !u!114 &1022354037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1022354036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f3b870e506f4124c8010e577be50295, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Taso2: MainMenu
---- !u!68 &1022354038
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1022354036}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: -.74000001}
-  m_Points:
-  - {x: -1.66499996, y: 0}
-  - {x: 1.66499996, y: 0}
 --- !u!1 &1042045162
 GameObject:
   m_ObjectHideFlags: 0

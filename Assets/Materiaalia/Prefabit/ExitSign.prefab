@@ -9,6 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 413970}
   - 212: {fileID: 21240152}
+  - 68: {fileID: 6808068}
+  - 114: {fileID: 11430784}
   m_Layer: 0
   m_Name: ExitSign
   m_TagString: Untagged
@@ -23,11 +25,37 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.8600006, y: 31.4500008, z: 0}
+  m_LocalPosition: {x: 19.8600006, y: 31.3500004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!68 &6808068
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180104}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -.74000001}
+  m_Points:
+  - {x: -1.66499996, y: 0}
+  - {x: 1.66499996, y: 0}
+--- !u!114 &11430784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f3b870e506f4124c8010e577be50295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Taso: skene2
 --- !u!212 &21240152
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -51,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 7fb76a2fbac07a24c996ab1153fc4368, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
