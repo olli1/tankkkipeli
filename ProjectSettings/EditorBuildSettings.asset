@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/Levelit/skene.unity
   - enabled: 1
     path: Assets/Levelit/skene2.unity
+  - enabled: 1
+    path: Assets/Levelit/skene3.unity

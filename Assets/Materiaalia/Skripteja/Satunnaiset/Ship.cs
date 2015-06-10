@@ -3,6 +3,11 @@ using System.Collections;
 
 public class Ship : MonoBehaviour {
 
+
+	public AudioClip[] audioClip; //äänet taulukkoon
+
+
+
 	public Rigidbody2D rb;
 	public int speed;
 	public float rotspeed;
@@ -12,9 +17,17 @@ public class Ship : MonoBehaviour {
 	bool right = false;
 	bool left = false;
 
+	//bool kaynti=false;
 
 	// Use this for initialization
 	void Start () {
+
+
+
+
+
+
+
 
 		rb = GetComponent<Rigidbody2D> ();
 
@@ -27,10 +40,35 @@ public class Ship : MonoBehaviour {
 	void Update () {
 
 
+		if(Input.GetKeyUp(KeyCode.W)&&GetComponent<AudioSource>().isPlaying){
+			
+			PlaySound(1);
+			GetComponent<AudioSource>().loop=true;
+			
+		}
+
+
+
+
 		if (Input.GetKey (KeyCode.W)) {
-			up = true;		
-		} else
+
+			up = true;
+
+
+			if(Input.GetKeyDown(KeyCode.W)&&GetComponent<AudioSource>().isPlaying){
+
+				PlaySound(2);
+				GetComponent<AudioSource>().loop=true;
+
+	}
+			
+
+
+		}
+		 else
 			up = false;
+
+	
 		
 		if (Input.GetKey (KeyCode.S)) {
 			down = true;		
@@ -52,8 +90,45 @@ public class Ship : MonoBehaviour {
 		
 
 
-	}
+		if (Input.GetKey (KeyCode.I)) {
+				
 
+
+			if(kaynnissa <2){
+			PlaySound (0);
+
+
+				kaynnissa = 2;
+
+				
+			}
+
+		}
+
+	
+				
+			
+
+
+
+		
+		 
+
+
+		//Debug.Log (kaynnissa);
+
+ if(kaynnissa == 2 && !GetComponent<AudioSource>().isPlaying) {
+			PlaySound(1,true);
+			kaynnissa = 3;
+
+		}
+
+
+
+  }
+
+
+	int kaynnissa = 0;
 
 
 
@@ -69,10 +144,17 @@ public class Ship : MonoBehaviour {
 
 
 		if (up) {
-			rb.AddForce(transform.up * speed);
+			rb.AddForce (transform.up * speed);
 
-			//transform.Rotate(new Vector2(0,speed * Time.deltaTime));
-		}
+
+			     
+
+
+
+
+
+				//transform.Rotate(new Vector2(0,speed * Time.deltaTime));
+		} 
 
 		if (down) {
 			rb.AddForce(-transform.up * speed);
@@ -100,11 +182,22 @@ public class Ship : MonoBehaviour {
 	}
 
 
+	void PlaySound(int clip,bool loop = false){
+	
+	
+	 
+		GetComponent<AudioSource> ().clip = audioClip [clip];
+		if (loop) 
+			GetComponent<AudioSource> ().loop = true;
+		else
+			GetComponent<AudioSource> ().loop = false;
+		
 
-
-
-
-
+		GetComponent<AudioSource>().Play();
+	
+	
+	
+	}
 
 
 
