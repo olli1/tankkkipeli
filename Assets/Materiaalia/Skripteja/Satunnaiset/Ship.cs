@@ -17,7 +17,10 @@ public class Ship : MonoBehaviour {
 	bool right = false;
 	bool left = false;
 
-	//bool kaynti=false;
+
+	//bool kaynti;
+
+	bool toiminnassa=false;
 
 	// Use this for initialization
 	void Start () {
@@ -40,65 +43,82 @@ public class Ship : MonoBehaviour {
 	void Update () {
 
 
-		if(Input.GetKeyUp(KeyCode.W)&&GetComponent<AudioSource>().isPlaying){
+
+
+
+		if (toiminnassa) {
+
+
+
+
+			if (Input.GetKeyUp (KeyCode.W) && GetComponent<AudioSource> ().isPlaying) {
 			
-			PlaySound(1);
-			GetComponent<AudioSource>().loop=true;
+				PlaySound (1);
+				GetComponent<AudioSource> ().loop = true;
 			
-		}
+			}
 
 
 
 
-		if (Input.GetKey (KeyCode.W)) {
+			if (Input.GetKey (KeyCode.W)) {
 
-			up = true;
+				up = true;
 
 
-			if(Input.GetKeyDown(KeyCode.W)&&GetComponent<AudioSource>().isPlaying){
+				if (Input.GetKeyDown(KeyCode.W)){
 
-				PlaySound(2);
-				GetComponent<AudioSource>().loop=true;
+					PlaySound (2);
+					GetComponent<AudioSource> ().loop = true;
 
-	}
+				}
+
+
+
 			
 
 
-		}
-		 else
-			up = false;
+			} else
+				up = false;
 
 	
 		
-		if (Input.GetKey (KeyCode.S)) {
-			down = true;		
-		} else
-			down = false;
+			if (Input.GetKey (KeyCode.S)) {
+				down = true;		
+			} else
+				down = false;
 		
-		if (Input.GetKey (KeyCode.D)) {
-			right = true;	
+			if (Input.GetKey (KeyCode.D)) {
+				right = true;	
 
 
-		} else
-			right = false;
+			} else
+				right = false;
 		
-		if (Input.GetKey (KeyCode.A)) {
-			left = true;		
+			if (Input.GetKey (KeyCode.A)) {
+				left = true;		
+			} else
+				left = false;
+
+
 		}
-		else
-			left = false;
-		
 
 
 		if (Input.GetKey (KeyCode.I)) {
-				
-
-
+			
+			
+			
 			if(kaynnissa <2){
-			PlaySound (0);
+				PlaySound (0);
 
-
+				toiminnassa=true;	
+				
 				kaynnissa = 2;
+
+
+
+
+
 
 				
 			}
@@ -118,8 +138,12 @@ public class Ship : MonoBehaviour {
 		//Debug.Log (kaynnissa);
 
  if(kaynnissa == 2 && !GetComponent<AudioSource>().isPlaying) {
+
 			PlaySound(1,true);
+
 			kaynnissa = 3;
+
+
 
 		}
 
