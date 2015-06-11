@@ -18,14 +18,16 @@ public class Ship : MonoBehaviour {
 	bool left = false;
 
 
-	//bool kaynti;
+
+	AudioSource[] aanet;
+	//public bool kaynti=false;
 
 	bool toiminnassa=false;
 
 	// Use this for initialization
 	void Start () {
 
-
+		aanet = GetComponents<AudioSource> ();
 
 
 
@@ -38,25 +40,59 @@ public class Ship : MonoBehaviour {
 	}
 
 
-
+	bool sammuu = false;
 	// Update is called once per frame
 	void Update () {
 
 
 
-
-
 		if (toiminnassa) {
 
-
-
-
-			if (Input.GetKeyUp (KeyCode.W) && GetComponent<AudioSource> ().isPlaying) {
+			if(!up&&!down && GetComponent<AudioSource>().pitch >1){
 			
-				PlaySound (1);
-				GetComponent<AudioSource> ().loop = true;
-			
+			GetComponent<AudioSource> ().pitch = GetComponent<AudioSource> ().pitch - Time.deltaTime * 0.25f;
 			}
+				
+
+
+
+		/*	if (Input.GetKeyUp (KeyCode.W) && GetComponent<AudioSource> ().isPlaying) {
+				Debug.Log (rb.velocity.y);
+
+				delay-=Time.deltaTime;
+				
+				
+				if(delay<=0)	
+					StopSound (1);}
+
+			
+			}*/
+
+
+
+
+
+
+
+			if(GetComponent<AudioSource> ().pitch <= 1  && sammuu == true && !up&&!down&&!right&&!left){
+				
+				sammuu =false;
+
+
+
+				
+				PlaySound (1, true);
+				StopSound (1);
+			}
+
+
+
+
+			
+		
+	
+
+	
 
 
 
@@ -65,11 +101,16 @@ public class Ship : MonoBehaviour {
 
 				up = true;
 
+				sammuu = true;
 
 				if (Input.GetKeyDown(KeyCode.W)){
 
 					PlaySound (2);
 					GetComponent<AudioSource> ().loop = true;
+
+					PlaySound (3,true,1);
+
+
 
 				}
 
@@ -84,19 +125,61 @@ public class Ship : MonoBehaviour {
 	
 		
 			if (Input.GetKey (KeyCode.S)) {
-				down = true;		
+			
+				down = true;
+
+				sammuu = true;
+
+				if (Input.GetKeyDown(KeyCode.S)){
+					
+					PlaySound (2);
+					GetComponent<AudioSource> ().loop = true;
+					
+					PlaySound (3,true,1);
+
+
+					
+					
+					
+				}
+
+
+
+
+
+
+
 			} else
 				down = false;
 		
 			if (Input.GetKey (KeyCode.D)) {
 				right = true;	
+				sammuu=true;
+				if (Input.GetKeyDown(KeyCode.D)){
+
+					PlaySound (3,true,1);
+				
+				}
+
+
 
 
 			} else
 				right = false;
+
 		
 			if (Input.GetKey (KeyCode.A)) {
-				left = true;		
+				left = true;
+				sammuu=true;
+				if (Input.GetKeyDown(KeyCode.A)){
+					
+					PlaySound (3,true,1);
+					
+				}
+
+
+
+
 			} else
 				left = false;
 
@@ -168,7 +251,40 @@ public class Ship : MonoBehaviour {
 
 
 		if (up) {
+			//if(rb.velocity.y <=8f){
+
 			rb.AddForce (transform.up * speed);
+				
+			GetComponent<AudioSource> ().pitch = GetComponent<AudioSource> ().pitch + Time.deltaTime * 0.17f;
+
+		
+				
+			
+				
+			
+
+
+			if (GetComponent<AudioSource> ().pitch >= 1.40f) {
+
+				GetComponent<AudioSource> ().pitch = 1.40f;
+
+			
+
+
+			
+			
+			
+			
+			}
+	
+		} 
+
+				
+
+				
+			
+			
+			
 
 
 			     
@@ -178,10 +294,27 @@ public class Ship : MonoBehaviour {
 
 
 				//transform.Rotate(new Vector2(0,speed * Time.deltaTime));
-		} 
+
 
 		if (down) {
 			rb.AddForce(-transform.up * speed);
+
+			GetComponent<AudioSource> ().pitch = GetComponent<AudioSource> ().pitch + Time.deltaTime * 0.20f;
+
+
+			if (GetComponent<AudioSource> ().pitch >= 1.40f) {
+				
+				GetComponent<AudioSource> ().pitch = 1.40f;
+				
+				
+				
+				
+				
+				
+				
+				
+			}
+
 
 			//transform.Rotate(new Vector2(0,-speed * Time.deltaTime));
 		
@@ -206,21 +339,24 @@ public class Ship : MonoBehaviour {
 	}
 
 
-	void PlaySound(int clip,bool loop = false){
+	void PlaySound(int clip,bool loop = false,int source = 0){
 	
-	
+		aanet [source].clip = audioClip [clip];
 	 
-		GetComponent<AudioSource> ().clip = audioClip [clip];
+		//GetComponent<AudioSource> ().clip = audioClip [clip];
 		if (loop) 
-			GetComponent<AudioSource> ().loop = true;
+			aanet [source].loop = true;
 		else
-			GetComponent<AudioSource> ().loop = false;
+			aanet [source].loop = false;
 		
 
-		GetComponent<AudioSource>().Play();
+		aanet[source].Play();
 	
 	
 	
+	}
+	void StopSound(int source = 0){
+		aanet [source].Stop ();
 	}
 
 
