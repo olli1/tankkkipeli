@@ -291,6 +291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   piste: 10
+  Tuli: {fileID: 176480, guid: 8a3960956c1a73242b06b482c744e551, type: 2}
   health: 4
   invulnPeriod: 0
 --- !u!114 &11432570
@@ -304,6 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f609238c4c09ddd479e282f89c465931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotaatio: 0
   inRange: 0
   range: 5
   speed: .0299999993
@@ -333,6 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f609238c4c09ddd479e282f89c465931, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotaatio: 0
   inRange: 0
   range: 4
   speed: .00999999978

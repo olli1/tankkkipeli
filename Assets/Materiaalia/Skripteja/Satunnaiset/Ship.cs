@@ -46,6 +46,10 @@ public class Ship : MonoBehaviour {
 
 
 
+
+
+
+
 		if (toiminnassa) {
 
 			if(!up&&!down && GetComponent<AudioSource>().pitch >1){
@@ -276,6 +280,11 @@ public class Ship : MonoBehaviour {
 			
 			
 			}
+
+
+
+
+
 	
 		} 
 

@@ -6,6 +6,7 @@ public class Skripti : MonoBehaviour {
 
 	//float timer =0;
 
+	float speed = 0.04f;
 
 	// Use this for initialization
 	void Start () {
@@ -72,7 +73,8 @@ void Update () {
 		Vector3 mouse = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		Vector3 lookat = transform.position - mouse;
 		float angle = Mathf.Atan2 (lookat.y, lookat.x) * Mathf.Rad2Deg +90;
-		transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
+		//transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
+		 transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.AngleAxis (angle, Vector3.forward),speed);
 	
 	}
 

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class KolariVahinko : MonoBehaviour {
 	public float piste = 10;
-
+	public GameObject Tuli;
 	public int health = 1;//healthi muuneltavissa
 
 	public float invulnPeriod = 0;
@@ -131,16 +131,38 @@ public class KolariVahinko : MonoBehaviour {
 			
 			}
 
+
+
 	
 		}
 
 
 
+
 	void Die()//tuhoutuminen
 	{
+
+		//GetComponent<AudioSource> ().Play ();
+			
 		Destroy (gameObject);
+
+		if(GameObject.FindGameObjectWithTag("Enemy")){
+
+			transform.eulerAngles = new Vector3(10, 5, 0);
+
+			GameObject Romukasa = (GameObject)Instantiate (Tuli, transform.position, transform.rotation);
+
+
+
+
+		
+		}
+
 		
 	}
+
+
+
 
 
 

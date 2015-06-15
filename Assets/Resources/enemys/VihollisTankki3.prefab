@@ -350,6 +350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   piste: 10
+  Tuli: {fileID: 176480, guid: 8a3960956c1a73242b06b482c744e551, type: 2}
   health: 4
   invulnPeriod: 0
 --- !u!212 &21209006
