@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ammus : MonoBehaviour {
 
-	public int health = 1;//healthi muuneltavissa
+	public float health = 1;//healthi muuneltavissa
 	
 
 	int correctLayer;

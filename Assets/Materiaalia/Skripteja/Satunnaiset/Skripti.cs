@@ -69,13 +69,18 @@ void Update () {
 		}*/
 
 
+		if (GameObject.Find("Controlleri").GetComponent<Kontrolloi>().pause ==false){
+
 		
-		Vector3 mouse = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-		Vector3 lookat = transform.position - mouse;
-		float angle = Mathf.Atan2 (lookat.y, lookat.x) * Mathf.Rad2Deg +90;
-		//transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
-		 transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.AngleAxis (angle, Vector3.forward),speed);
+			Vector3 mouse = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+			Vector3 lookat = transform.position - mouse;
+			float angle = Mathf.Atan2 (lookat.y, lookat.x) * Mathf.Rad2Deg + 90;
+			//transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
+			transform.rotation = Quaternion.Slerp (transform.rotation, Quaternion.AngleAxis (angle, Vector3.forward), speed);
 	
+
+		}
+
 	}
 
 

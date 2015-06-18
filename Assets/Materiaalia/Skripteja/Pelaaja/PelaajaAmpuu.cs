@@ -12,7 +12,9 @@ public class PelaajaAmpuu : MonoBehaviour {
 	public Vector3 bulletOffset = new Vector3 (0, 0, 0);//voi hienosäätää ammuksen lähtökohtaa
 	
     public float viive = 0.30f;
+
 	float jaahyAjastin = 0;
+
 
 	int bulletLayer;
 
@@ -22,6 +24,7 @@ public class PelaajaAmpuu : MonoBehaviour {
 	void Start () {
 	
 		bulletLayer = gameObject.layer;
+
 
 		ampuu = transform.Find ("Ampupiste");//löytää pelaajan gameobjektissa olevan empty child objektin joka määrittää ammuksen lähtöpaikan
 
@@ -65,10 +68,22 @@ public class PelaajaAmpuu : MonoBehaviour {
 			bulletGO.layer = bulletLayer;
 
 
+
+
+
 			//Instantiate(bulletPrefab,ampuu.position+bulletOffset, ampuu.rotation);//ammuksen lähtöpaikan määritys ja ammuksen luonti kun ammutaan
 
+		
 		}
 	
+
+
+
+
+
+
+
+
 	}
 
 

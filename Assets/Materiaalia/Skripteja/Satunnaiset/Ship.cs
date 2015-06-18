@@ -3,10 +3,10 @@ using System.Collections;
 
 public class Ship : MonoBehaviour {
 
-
+	public GameObject bulletPrefab;
 	public AudioClip[] audioClip; //äänet taulukkoon
 
-
+	int ammuslayer;
 
 	public Rigidbody2D rb;
 	public int speed;
@@ -19,6 +19,12 @@ public class Ship : MonoBehaviour {
 
 
 
+
+	float jaahyAjastin2 = 0;
+	public float viive2;
+
+
+
 	AudioSource[] aanet;
 	//public bool kaynti=false;
 
@@ -27,7 +33,11 @@ public class Ship : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+		ampuu2 = transform.Find ("Ampupiste2");
+
 		aanet = GetComponents<AudioSource> ();
+
+		ammuslayer = gameObject.layer;
 
 
 
@@ -39,10 +49,54 @@ public class Ship : MonoBehaviour {
 	
 	}
 
+	Transform ampuu2;
+
 
 	bool sammuu = false;
 	// Update is called once per frame
 	void Update () {
+
+
+
+		jaahyAjastin2 -= Time.deltaTime;
+		
+		if (Input.GetMouseButton (1)&& jaahyAjastin2 <= 0) {
+			
+
+
+
+			jaahyAjastin2 = viive2;
+			
+			GameObject bulletGO2 = (GameObject)Instantiate (bulletPrefab, ampuu2.position, ampuu2.rotation);//ammuksen lähtöpaikan määritys ja ammuksen luonti kun ammutaan
+			
+			bulletPrefab.GetComponent<ammus>().health = bulletPrefab.GetComponent<ammus>().health =0.5f;
+
+
+
+			bulletGO2.transform.localScale = new Vector3(0.1f,0.1f,0);
+
+
+
+			bulletGO2.layer = ammuslayer;
+			
+			
+		}
+
+
+		if (Input.GetMouseButtonDown (1)) {
+			PlaySound (4, true, 2);
+
+		} 
+		if(Input.GetMouseButtonUp(1)){
+			StopSound(2);
+			bulletPrefab.GetComponent<ammus>().health = bulletPrefab.GetComponent<ammus>().health =1;
+		}
+
+		
+		
+
+
+
 
 
 
