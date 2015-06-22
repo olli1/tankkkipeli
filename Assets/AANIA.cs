@@ -7,7 +7,7 @@ public class AANIA : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		GameObject.FindGameObjectWithTag ("Enemy");
+		//GameObject.FindGameObjectWithTag ("Enemy");
 	
 	}
 
@@ -15,16 +15,17 @@ public class AANIA : MonoBehaviour {
 	void Update () {
 
 	
-		if (GameObject.FindGameObjectWithTag ("Enemy").GetComponent<KolariVahinko> ().health <= 0) {
+		//if (GameObject.FindGameObjectWithTag ("Enemy").GetComponent<KolariVahinko> ().health <= 0) {
 		
 	
-			GetComponent<AudioSource> ().Play ();
+		//GetComponent<AudioSource> ().Play ();
 
 
 
 
-			Debug.Log ("AANIA");
-		} 
+		//Debug.Log ("AANIA");
+
+	//}
 		
 		
 

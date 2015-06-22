@@ -150,6 +150,10 @@ public class KolariVahinko : MonoBehaviour {
 
 			transform.eulerAngles = new Vector3(10, 5, 0);
 
+			GameObject PlaySOUNDI = GameObject.Find("AANIA");
+
+			PlaySOUNDI.GetComponent<AudioSource>().Play();
+
 			GameObject Romukasa = (GameObject)Instantiate (Tuli, transform.position, transform.rotation);
 
 

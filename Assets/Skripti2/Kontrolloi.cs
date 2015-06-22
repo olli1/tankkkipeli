@@ -1,21 +1,72 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class Kontrolloi : MonoBehaviour {
+	public GameObject playerPrefab;
 	public float pisteet = 0;
 	public GameObject ExitKyltti;
+
+	public GUIStyle healthBarGui;
+
+
+
+	int healtti; 
+
+
+
+
+
+
+		
+		
+		
+		
+	
+	
+
+
+
+
+
+
+
 
 	public bool pause = false;
 
 	// Use this for initialization
 	void Start () {
+
+
+
+		//healtti = GameObject.FindGameObjectWithTag ("Player").GetComponent<KolariVahinko> ().health;
+
+
+
 	
 	}
+
+
+
+
+
+
+
+
+
+
+
+
 	public void lisaa(float p){
 		pisteet += p;
 	}
 	// Update is called once per frame
 	void Update () {
+
+
+		healtti = GameObject.FindGameObjectWithTag ("Player").GetComponent<KolariVahinko> ().health;
+
+
 	
 		if (Input.GetKeyDown (KeyCode.P)) {
 
@@ -36,6 +87,21 @@ public class Kontrolloi : MonoBehaviour {
 }
 
 	void OnGUI(){
+
+		float guihp = (100/healtti);
+		GUI.Box(new Rect (100, 5, (Screen.width / 3 )*10/ guihp, 20), "" + healtti,healthBarGui);
+		Debug.Log (guihp);
+
+
+
+
+
+
+
+
+
+
+
 
 		if (pause) {
 		
@@ -78,6 +144,30 @@ public class Kontrolloi : MonoBehaviour {
 	
 	
 	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+
 
 
 
