@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 413970}
   - 212: {fileID: 21240152}
   - 68: {fileID: 6808068}
-  - 114: {fileID: 11430784}
+  - 114: {fileID: 11434678}
   m_Layer: 0
   m_Name: ExitSign
   m_TagString: Untagged
@@ -44,7 +44,7 @@ EdgeCollider2D:
   m_Points:
   - {x: -1.66499996, y: 0}
   - {x: 1.66499996, y: 0}
---- !u!114 &11430784
+--- !u!114 &11434678
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

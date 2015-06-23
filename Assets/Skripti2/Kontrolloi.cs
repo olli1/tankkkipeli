@@ -64,6 +64,7 @@ public class Kontrolloi : MonoBehaviour {
 	void Update () {
 
 
+
 		healtti = GameObject.FindGameObjectWithTag ("Player").GetComponent<KolariVahinko> ().health;
 
 
