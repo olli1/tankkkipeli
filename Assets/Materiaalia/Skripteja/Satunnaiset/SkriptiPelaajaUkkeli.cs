@@ -6,7 +6,7 @@ public class SkriptiPelaajaUkkeli : MonoBehaviour {
 
 	//float timer =0;
 
-	float speed = 0.06f;
+	float speed = 0.09f;
 
 	// Use this for initialization
 	void Start () {

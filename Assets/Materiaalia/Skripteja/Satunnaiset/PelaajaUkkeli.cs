@@ -11,7 +11,7 @@ public class PelaajaUkkeli : MonoBehaviour {
 	Animator anim;
 	public Animator anim2;
 
-
+	int runspeed = 190;
 
 
 
@@ -54,10 +54,22 @@ if (Input.GetKey (KeyCode.W)) {
 			up = true;
 			anim2.SetBool("heilu",true);
 			anim.SetBool ("liiku", true);
+
+			if(Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W)){
+
+				speed = runspeed;
+				anim.SetBool("juokse",true);
+			
+			}
+
+
 		} else {
 			up = false;
 			anim.SetBool ("liiku", false);
 			anim2.SetBool("heilu",false);
+			anim.SetBool("juokse",false);
+			speed = 65;
+
 		}
 
 

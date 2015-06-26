@@ -39,6 +39,7 @@ public class Kontrolloi : MonoBehaviour {
 
 
 
+
 		//healtti = GameObject.FindGameObjectWithTag ("Player").GetComponent<KolariVahinko> ().health;
 
 
@@ -64,6 +65,24 @@ public class Kontrolloi : MonoBehaviour {
 	void Update () {
 
 
+		if(!(GameObject.FindGameObjectWithTag("Enemy"))){
+			
+			Debug.Log("sdasdsda");
+			
+			ExitKyltti.SetActive(true);
+			GameObject.Find("OVI1").GetComponent<OvenLiike>().avaa = true;
+			GameObject.Find("OVI2").GetComponent<OvenLiike>().avaa = true;
+			
+			
+			
+		}
+
+
+
+
+
+
+
 
 		healtti = GameObject.FindGameObjectWithTag ("Player").GetComponent<KolariVahinko> ().health;
 
@@ -77,14 +96,7 @@ public class Kontrolloi : MonoBehaviour {
 
 
 		
-		if(!(GameObject.FindGameObjectWithTag("Enemy"))){
-		
-		
-			ExitKyltti.SetActive(true);
-		
 
-	
-	}
 }
 
 	void OnGUI(){

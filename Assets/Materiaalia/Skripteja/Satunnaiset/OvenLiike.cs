@@ -9,7 +9,7 @@ public class OvenLiike : MonoBehaviour {
 
 	public bool spiidi2 = true;
 
-
+	public bool avaa = false;
 
 	float ajastin = 3;
 
@@ -28,85 +28,81 @@ public class OvenLiike : MonoBehaviour {
 
 	void Update (){
 
+		if (avaa) {
 
-		if (suunta) {
+			if (suunta) {
 
-			if (spiidi2) {
-				Vector3 pos = transform.position;
+				if (spiidi2) {
+					Vector3 pos = transform.position;
 
-				Vector3 velocity = new Vector3 (-maxSpeed * Time.deltaTime, 0, 0);
+					Vector3 velocity = new Vector3 (-maxSpeed * Time.deltaTime, 0, 0);
 
 
 
-				pos += transform.rotation * velocity;
+					pos += transform.rotation * velocity;
 
 		
 
+					transform.position = pos;
+
+					ajastin -= Time.deltaTime;
+
+					if (ajastin <= 0)
+						spiidi2 = false;
+
+
+
+
+
+
+
+				}
+
+
+
+
+
+		
+
+
+
+
+
+			} else
+			
+			
+		if (spiidi2) {
+				Vector3 pos = transform.position;
+			
+				Vector3 velocity = new Vector3 (maxSpeed * Time.deltaTime, 0, 0);
+			
+			
+			
+				pos += transform.rotation * velocity;
+			
+			
+			
 				transform.position = pos;
-
+			
 				ajastin -= Time.deltaTime;
-
+			
 				if (ajastin <= 0)
 					spiidi2 = false;
-
-
-
-
-
-
-
+			
+			
+			
+			
+			
+			
+			
 			}
 
 
 
 
-
-		
-
-
-
-
-
 		}
-
-
-
-
-		else
-			
-			
-		if (spiidi2) {
-			Vector3 pos = transform.position;
-			
-			Vector3 velocity = new Vector3 (maxSpeed * Time.deltaTime, 0, 0);
-			
-			
-			
-			pos += transform.rotation * velocity;
-			
-			
-			
-			transform.position = pos;
-			
-			ajastin -= Time.deltaTime;
-			
-			if (ajastin <= 0)
-				spiidi2 = false;
-			
-			
-			
-			
-			
-			
-			
-		}
-
-
-
 
 	}
-
-
 
 
 

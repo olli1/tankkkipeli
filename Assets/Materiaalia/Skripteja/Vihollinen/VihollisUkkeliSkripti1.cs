@@ -10,6 +10,7 @@ public class VihollisUkkeliSkripti1 : MonoBehaviour {
 
 
 
+
 	//public Transform alku, loppu;
 	//public bool huomattu = false;
 	public bool inRange = false;
@@ -21,6 +22,9 @@ public class VihollisUkkeliSkripti1 : MonoBehaviour {
 	public float speed;
 	public float returnSpeed;
 	void Start () {
+
+
+
 		//alkuperäinen sijainti tallennetaan tässä
 		startPos = transform.position;
 
@@ -67,6 +71,8 @@ public class VihollisUkkeliSkripti1 : MonoBehaviour {
 		if (inRange) {
 			if(GetComponent<LiikeEteen>()){GetComponent<LiikeEteen>().spiidi=true;	}
 	
+		
+			
 			if (player == null) {
 				//löydetään pelaaja
 				GameObject go = GameObject.FindGameObjectWithTag ("Player");

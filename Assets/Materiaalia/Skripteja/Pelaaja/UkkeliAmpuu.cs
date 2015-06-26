@@ -61,7 +61,7 @@ public class UkkeliAmpuu : MonoBehaviour {
 			jaahyAjastin = viive;
 		
 				
-			bulletPrefab.GetComponent<LiikeEteen>().maxSpeed = 9;
+			bulletPrefab.GetComponent<LiikeEteen>().maxSpeed = 11.5f;
 		
 				GameObject bulletGO = (GameObject)Instantiate (bulletPrefab, ampuu.position + bulletOffset, ampuu.rotation);//ammuksen lähtöpaikan määritys ja ammuksen luonti kun ammutaan
 			

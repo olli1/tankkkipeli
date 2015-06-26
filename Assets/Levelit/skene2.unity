@@ -4760,6 +4760,10 @@ Prefab:
       propertyPath: m_Offset.x
       value: .0399999991
       objectReference: {fileID: 0}
+    - target: {fileID: 11434678, guid: 7fc956c879fa8914d8f29fb92e2ab7f4, type: 2}
+      propertyPath: Taso
+      value: skene3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6808068, guid: 7fc956c879fa8914d8f29fb92e2ab7f4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 7fc956c879fa8914d8f29fb92e2ab7f4, type: 2}

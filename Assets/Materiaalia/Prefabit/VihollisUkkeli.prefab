@@ -25,10 +25,10 @@ GameObject:
   - 4: {fileID: 409360}
   - 212: {fileID: 21287406}
   - 50: {fileID: 5020360}
-  - 95: {fileID: 9526432}
   - 58: {fileID: 5825662}
   - 114: {fileID: 11401780}
   - 114: {fileID: 11492560}
+  - 114: {fileID: 11460796}
   m_Layer: 9
   m_Name: VihollisUkkeli
   m_TagString: Enemy
@@ -45,11 +45,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 429528}
   - 212: {fileID: 21208950}
-  - 95: {fileID: 9583440}
   - 114: {fileID: 11469430}
   m_Layer: 9
   m_Name: VihollisUkkeliTorso
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,7 +77,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.92000008, y: 60.6500015, z: 0}
+  m_LocalPosition: {x: -22.4300003, y: 72.1200027, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 429528}
@@ -168,40 +167,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &9526432
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 104010}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5b37312a18ec4e342845ef4e5a1e560e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &9583440
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 192700}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e3fee00062fce9b409ba072b3270dc86, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11401780
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -215,6 +180,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 4
   spiidi: 1
+--- !u!114 &11460796
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f0f7b5d9d30b4648a8d48fc0f04697f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  piste: 10
+  Tuli: {fileID: 0}
+  health: 1
+  invulnPeriod: 0
 --- !u!114 &11469430
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -270,7 +250,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 33ef89bc1e773044989b9ec6eae7876b, type: 3}
   m_Color: {r: .902999997, g: 1, b: 0, a: 1}
 --- !u!212 &21220538
