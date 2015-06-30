@@ -5,6 +5,40 @@ using System.Collections;
 
 public class PathDefinition : MonoBehaviour {
 
+	//public GameObject rautatie;
+
+
+
+	void Start(){
+
+
+
+	
+		/*for (var k = 0; k<Points.Length; k++) {
+			
+			GameObject.Instantiate(rautatie, Points[k].position, Points[k].rotation );
+			
+			
+			
+		}*/
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+	}
+
+
+
+
 
 	public Transform[] Points;
 
@@ -44,7 +78,8 @@ public class PathDefinition : MonoBehaviour {
 
 	public void OnDrawGizmos(){
 	
-	
+
+
 		if (Points ==null||Points.Length < 2)
 			return;
 
@@ -52,6 +87,12 @@ public class PathDefinition : MonoBehaviour {
 		for (var i = 1; i<Points.Length; i++) {
 		
 			Gizmos.DrawLine(Points[i-1].position, Points[i].position);
+
+
+
+
+
+
 		
 		
 		}

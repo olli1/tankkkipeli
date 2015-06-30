@@ -16,7 +16,7 @@ public class FollowPath : MonoBehaviour {
 	public FollowType Type = FollowType.MoveTowards;
 	public PathDefinition Path;
 	public float speed4 = 1;
-	public float speed3 = 0.06f;
+	public float speed3 = 0.09f;
 	public float MaxDistanceToGoal = .1f;
 
 	private IEnumerator<Transform> _currentPoint;
@@ -52,7 +52,7 @@ public class FollowPath : MonoBehaviour {
 
 	public void Update(){
 
-		Vector3 dir= transform.position-_currentPoint.Current.position;
+		Vector3 dir = _currentPoint.Current.position - transform.position;
 		dir.Normalize ();
 
 		float zAngle = Mathf.Atan2 (dir.y, dir.x) * Mathf.Rad2Deg - 90;
