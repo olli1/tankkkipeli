@@ -11,6 +11,13 @@ public class PathDefinition : MonoBehaviour {
 
 	void Start(){
 
+	
+
+
+
+
+
+
 
 
 	
@@ -18,7 +25,7 @@ public class PathDefinition : MonoBehaviour {
 			
 			GameObject.Instantiate(rautatie, Points[k].position, Points[k].rotation );
 			
-			
+
 			
 		}*/
 
@@ -57,15 +64,23 @@ public class PathDefinition : MonoBehaviour {
 		var index = 0;
 		while (true) {
 		
-			yield return Points[index];
+		
+
+			  yield return Points[index];
 
 			if(Points.Length == 1)
 				continue;
 
 			if(index <= 0)
 				direction =1;
+
 			else if(index>=Points.Length - 1)
-				direction = -1;
+				direction = 1;
+				      
+				
+
+				
+
 
 			index = index + direction;
 

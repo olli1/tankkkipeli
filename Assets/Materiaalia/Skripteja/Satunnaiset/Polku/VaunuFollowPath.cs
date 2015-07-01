@@ -2,9 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class FollowPath : MonoBehaviour {
+public class VaunuFollowPath : MonoBehaviour {
 
 
+	public GameObject train1;
+	public float distance;
 
 
 
@@ -27,6 +29,8 @@ public class FollowPath : MonoBehaviour {
 
 	public void Start(){
 
+		train1 = GameObject.Find ("Veturi");
+
 
 
 
@@ -46,7 +50,7 @@ public class FollowPath : MonoBehaviour {
 			return;
 
 
-		transform.position = _currentPoint.Current.position;
+		transform.position = _currentPoint.Current.position+train1.transform.position*distance;
 
 
 	
