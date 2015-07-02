@@ -74,10 +74,10 @@ public class PathDefinition : MonoBehaviour {
 			if(index <= 0)
 				direction =1;
 
-			else if(index>=Points.Length - 1)
+			else if(index>=Points.Length - 1){
 				direction = 1;
-				      
-				
+				index = -1;	      
+			}
 
 				
 
