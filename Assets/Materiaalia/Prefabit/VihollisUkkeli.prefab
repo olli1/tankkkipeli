@@ -29,6 +29,7 @@ GameObject:
   - 114: {fileID: 11401780}
   - 114: {fileID: 11492560}
   - 114: {fileID: 11460796}
+  - 114: {fileID: 11443568}
   m_Layer: 9
   m_Name: VihollisUkkeli
   m_TagString: Enemy
@@ -47,6 +48,7 @@ GameObject:
   - 212: {fileID: 21208950}
   - 114: {fileID: 11469430}
   - 114: {fileID: 11404746}
+  - 114: {fileID: 11474086}
   m_Layer: 9
   m_Name: VihollisUkkeliTorso
   m_TagString: Untagged
@@ -78,7 +80,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.6700001, y: 70.0100021, z: 0}
+  m_LocalPosition: {x: -28.2999992, y: -52.0299988, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 429528}
@@ -195,6 +197,22 @@ MonoBehaviour:
   bulletPrefab: {fileID: 136622, guid: dd7711589526f2445b4e231df7487c0a, type: 2}
   bulletOffset: {x: 0, y: 0, z: 0}
   viive: .5
+--- !u!114 &11443568
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 104010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b92f5192157ffcd4a9bc0306d8190dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  Path: {fileID: 0}
+  speed4: 2
+  speed3: .0900000036
+  MaxDistanceToGoal: .100000001
 --- !u!114 &11460796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -226,6 +244,22 @@ MonoBehaviour:
   range: 12.1899996
   speed: .0199999996
   returnSpeed: 3
+--- !u!114 &11474086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b92f5192157ffcd4a9bc0306d8190dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  Path: {fileID: 0}
+  speed4: 2
+  speed3: .0900000036
+  MaxDistanceToGoal: .100000001
 --- !u!114 &11492560
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -265,7 +299,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 33ef89bc1e773044989b9ec6eae7876b, type: 3}
   m_Color: {r: .902999997, g: 1, b: 0, a: 1}
 --- !u!212 &21220538

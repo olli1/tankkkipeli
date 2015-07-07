@@ -70,7 +70,7 @@ public class VihollisUkkeliAmpuu : MonoBehaviour {
 		
 		jaahyAjastin -= Time.deltaTime;
 		
-		if (jaahyAjastin <= 0 && player !=null && Vector3.Distance(transform.position,player.position)<9&&GetComponent<VihollisSkripti1>().inRange) 
+		if (jaahyAjastin <= 0 && player !=null && Vector3.Distance(transform.position,player.position)<9&&GetComponent<VihollisUkkeliSkripti1>().inRange) 
 		{
 
 			if(!liekki.activeSelf){

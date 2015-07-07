@@ -51,6 +51,12 @@ public class VihollisUkkeliSkripti1 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		if (!inRange) {
+		
+			GetComponent<EnemyFollowPath>();
+		
+		}
+
 
 
 		//alue jossa pelaaja havaitaan 
