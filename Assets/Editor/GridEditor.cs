@@ -5,6 +5,8 @@ using System.IO;
 [CustomEditor(typeof(Grid))]
 public class GridEditor : Editor {
 
+	//4. How To Create a 2D Map Editor in Unity - Create a Selection Popup [C#] 6:55
+
 	Grid grid;
 
 	private int oldIndex;
@@ -102,7 +104,8 @@ public class GridEditor : Editor {
 			for(int i =0; i<names.Length; i++){
 			
 			
-				names[i] = grid.tileset.prefabs[i]!=null ? grid.tileset[i].prefabs.name:"";
+				names[i] = grid.tileset.prefabs[i]!=null ? grid.tileset.prefabs[i].name:"";
+
 				values[i] =i;
 			}
 
