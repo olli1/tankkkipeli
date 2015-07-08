@@ -151,31 +151,31 @@ public class GridEditor : Editor {
 		int controllid = GUIUtility.GetControlID (FocusType.Passive);
 
 		Event e = Event.current;
-		Ray ray = Camera.current.ScreenPointToRay(new Vector3(e.mousePosition.x,-e.mousePosition.y + Camera.current.pixelHeight));
+		Ray ray = Camera.current.ScreenPointToRay (new Vector3 (e.mousePosition.x, -e.mousePosition.y + Camera.current.pixelHeight));
 		Vector3 mousePos = ray.origin;
 
-		if (e.isMouse && e.type == EventType.MouseDown) {
+		if (e.isMouse && e.type == EventType.MouseDown && e.button == 0) {
 		
 			GUIUtility.hotControl = controllid;
-			e.Use();
+			e.Use ();
 
 			GameObject gameObject;
 			Transform prefab = grid.tilePrefab;
 
 
-			if(prefab){
+			if (prefab) {
 			
-				Undo.IncrementCurrentGroup();
+				Undo.IncrementCurrentGroup ();
 
-				gameObject = (GameObject)PrefabUtility.InstantiatePrefab(prefab.gameObject);
+				gameObject = (GameObject)PrefabUtility.InstantiatePrefab (prefab.gameObject);
 
-				Vector3 alligned = new Vector3(Mathf.Floor(mousePos.x/grid.width)* grid.width + grid.width/2.0f, 
-				                               Mathf.Floor(mousePos.y/grid.height)* grid.height + grid.height/2.0f,0.0f);
+				Vector3 alligned = new Vector3 (Mathf.Floor (mousePos.x / grid.width) * grid.width + grid.width / 2.0f, 
+				                               Mathf.Floor (mousePos.y / grid.height) * grid.height + grid.height / 2.0f, 0.0f);
 				gameObject.transform.position = alligned;
 				gameObject.transform.parent = grid.transform;
 
 			
-				Undo.RegisterCreatedObjectUndo(gameObject,"Create" + gameObject.name);
+				Undo.RegisterCreatedObjectUndo (gameObject, "Create" + gameObject.name);
 
 			
 			}
@@ -184,22 +184,60 @@ public class GridEditor : Editor {
 		}
 	
 
+		if (e.isMouse && e.type == EventType.MouseDown && e.button == 1) {
+		
+			GUIUtility.hotControl = controllid;
+
+			Vector3 alligned = new Vector3 (Mathf.Floor (mousePos.x / grid.width) * grid.width + grid.width / 2.0f, 
+			                               Mathf.Floor (mousePos.y / grid.height) * grid.height + grid.height / 2.0f, 0.0f);
+			
+			Transform transform = GetTransformFromPosition (alligned);
+
+			if (transform != null) {
+			
+			DestroyImmediate (transform.gameObject);
+			
+		
+			
+		}
+
 		if (e.isMouse && e.type == EventType.mouseUp) {
 		
 			GUIUtility.hotControl = 0;
-		
+			e.Use ();
 		}
 
-
+	}
 
 	
 	}
 
+	Transform GetTransformFromPosition(Vector3 alligned){
+	
+		int i = 0;
+		    while (i < grid.transform.childCount){
+				Transform transform = grid.transform.GetChild(i);
+				if(transform.position == alligned){
+				return transform;
+			
+			}
+		
+			i++;
+		}
 
 
-
-
-
-
+	return null;
 
 }
+
+}
+
+	
+	
+
+
+
+
+
+
+
