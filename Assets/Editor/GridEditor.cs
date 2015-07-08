@@ -7,6 +7,8 @@ public class GridEditor : Editor {
 
 	//4. How To Create a 2D Map Editor in Unity - Create a Selection Popup [C#] 6:55
 
+
+
 	Grid grid;
 
 	private int oldIndex;
@@ -111,23 +113,23 @@ public class GridEditor : Editor {
 
 			var index = EditorGUILayout.IntPopup("Select Tile", oldIndex,names,values); 
 
-		
-		
+		if(EditorGUI.EndChangeCheck()){
+				Undo.RecordObject(target, "Grid changed");
+				if(oldIndex != index){
+					oldIndex = index;
+					grid.tilePrefab = grid.tileset.prefabs[index];
+
+
+					float width = grid.tilePrefab.GetComponent<Renderer>().bounds.size.x;
+					float height = grid.tilePrefab.GetComponent<Renderer>().bounds.size.y;
+
+					grid.width = width;
+					grid.height = height;
+
+				
+				}
+			 }
 		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
 	}
 
 	private float createSlider(string labelName, float sliderPosition){
@@ -144,6 +146,54 @@ public class GridEditor : Editor {
 
 
 
+	void OnSceneGUI(){
+	
+		int controllid = GUIUtility.GetControlID (FocusType.Passive);
+
+		Event e = Event.current;
+		Ray ray = Camera.current.ScreenPointToRay(new Vector3(e.mousePosition.x,-e.mousePosition.y + Camera.current.pixelHeight));
+		Vector3 mousePos = ray.origin;
+
+		if (e.isMouse && e.type == EventType.MouseDown) {
+		
+			GUIUtility.hotControl = controllid;
+			e.Use();
+
+			GameObject gameObject;
+			Transform prefab = grid.tilePrefab;
+
+
+			if(prefab){
+			
+				Undo.IncrementCurrentGroup();
+
+				gameObject = (GameObject)PrefabUtility.InstantiatePrefab(prefab.gameObject);
+
+				Vector3 alligned = new Vector3(Mathf.Floor(mousePos.x/grid.width)* grid.width + grid.width/2.0f, 
+				                               Mathf.Floor(mousePos.y/grid.height)* grid.height + grid.height/2.0f,0.0f);
+				gameObject.transform.position = alligned;
+				gameObject.transform.parent = grid.transform;
+
+			
+				Undo.RegisterCreatedObjectUndo(gameObject,"Create" + gameObject.name);
+
+			
+			}
+
+		
+		}
+	
+
+		if (e.isMouse && e.type == EventType.mouseUp) {
+		
+			GUIUtility.hotControl = 0;
+		
+		}
+
+
+
+	
+	}
 
 
 
