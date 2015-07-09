@@ -5,7 +5,7 @@ using System.IO;
 [CustomEditor(typeof(Grid))]
 public class GridEditor : Editor {
 
-	//4. How To Create a 2D Map Editor in Unity - Create a Selection Popup [C#] 6:55
+
 
 
 
