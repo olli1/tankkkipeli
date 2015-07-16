@@ -78,7 +78,7 @@ public class VihollisUkkeliAmpuu : MonoBehaviour {
 			}
 
 
-
+			GetComponent<AudioSource>().Play();
 
 
 

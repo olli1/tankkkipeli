@@ -59,7 +59,8 @@ public class UkkeliAmpuu : MonoBehaviour {
 
 			Debug.Log ("pam");	
 			jaahyAjastin = viive;
-		
+
+			GetComponent<AudioSource>().Play();
 				
 			bulletPrefab.GetComponent<LiikeEteen>().maxSpeed = 11.5f;
 		
